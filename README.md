@@ -12,7 +12,6 @@ I organized everything by class and project for easy browsing!
 
 ## 📖 Courses Included
 
-- CS 1428: FOUNDATIONS OF COMPUTER SCI I
 - CS 2308: FOUNDATNS OF CS II
 - CS 2315: COMPUTER ETHICS
 - CS 3358: DATA STRCTS & ALGM
@@ -24,6 +23,5 @@ I organized everything by class and project for easy browsing!
 - CS 4326: HUMAN FACTORS
 - CS 4350: UNIX SYS PROGRMNG
 - CS 4379E: INTRO TO NETWORK SCIENCE 
-- (more to come!)
 
 ---
