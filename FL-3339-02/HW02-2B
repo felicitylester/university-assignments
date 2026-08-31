@@ -1,0 +1,47 @@
+# Felicity Lester
+# February 24, 2025
+# CS 3339
+# Homework 2-2B
+
+.data
+result: .word 0
+
+.text
+.globl power
+.globl main
+
+main:
+	li $a0, 2    # x = 2
+	li $a1, 3    # n = 3
+	jal power    # power(x, n)
+	
+	sw $v0, result   # Store result in memory
+	
+	# exit
+	li $v0, 10
+	syscall
+
+# Recursive power function: power(x, n)
+power:
+	addi $sp, $sp, -12   # space on stack
+	sw $ra, 8($sp)       # return address
+	sw $a1, 4($sp)       # save n
+	sw $a0, 0($sp)       # save x
+	
+	beq $a1, $zero, base_case
+	
+	addi $a1, $a1, -1   # decrement n
+	jal power           # power(x, n-1)
+
+	lw $a0, 0($sp)      # restore x
+	mul $v0, $a0, $v0   # x * power(x, n-1)
+	
+	j end_power
+
+base_case:
+	li $v0, 1  # Return 1 if n == 0
+
+end_power:
+	lw $ra, 8($sp)
+	addi $sp, $sp, 12
+	jr $ra
