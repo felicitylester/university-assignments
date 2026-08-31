@@ -12,6 +12,7 @@ I organized everything by class and project for easy browsing!
 
 ## 📖 Courses Included
 
+- CS 1428: FOUNDATNS OF CS I
 - CS 2308: FOUNDATNS OF CS II
 - CS 2315: COMPUTER ETHICS
 - CS 3358: DATA STRCTS & ALGM
